@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+
+{% block titulo %} Listado productos {% endblock %}
+
+{% block contenido %}
+
+
+<div class="card">
+    <div class="card-header">
+        <div class="alert alert-primary" role="alert">
+            <h2><a href="{% url 'listaProductos' %}">Productos</a><a>Buscador</a></h2>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-info table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Nº Inventario</th>
+                        <th scope="col">Tipo de equipo</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">SN</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Mantenimiento licitado</th>
+                        <th scope="col">Nº del mantenedor</th>
+                        <th scope="col">Nº Expediente Contratación</th>
+                        <th scope="col">Clínica</th>
+                        <th scope="col">ACCIÓN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="">
+                        <td scope="row">R1C1</td>
+                        <td>R1C2</td>
+                        <td>R1C3</td>
+                        <td scope="row">R1C1</td>
+                        <td>R1C2</td>
+                        <td>R1C3</td>
+                        <td scope="row">R1C1</td>
+                        <td>R1C2</td>
+                        <td>R1C3</td>
+                        <td>R1C3</td>
+                        <td>
+                            <a name="editar" id="editar" href="{% url 'editarProducto' %}" class="btn btn-info btn-sm"
+                                role="button">Editar</a>
+                            |
+                            <a name="eliminar" id="eliminar" href="{% url 'eliminarProducto' %}"
+                                class="btn btn-danger btn-sm" role="button">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="card-footer text-muted">
+        Footer
+    </div>
+</div>
+
+
+{% endblock %}
