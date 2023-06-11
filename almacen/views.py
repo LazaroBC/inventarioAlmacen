@@ -12,7 +12,10 @@ def listaProductos(request):
     return render(request, 'paginas/productos/listaProductos.html', {'productos':productos})
 
 def nuevoProducto(request):
-    formulario = ProductoForm(request.POST or None)
+    formulario = ProductoForm(request.POST or None, request.FILES or None)
+    if formulario.is_valid():
+        formulario.save()
+        return redirect('listaProductos')
     return render(request, 'paginas/productos/nuevoProducto.html', {'formulario':formulario})
 
 def editarProducto(request):
