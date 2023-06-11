@@ -32,16 +32,17 @@
                 </thead>
                 <tbody>
                     <tr class="">
-                        <td scope="row">R1C1</td>
-                        <td>R1C2</td>
-                        <td>R1C3</td>
-                        <td scope="row">R1C1</td>
-                        <td>R1C2</td>
-                        <td>R1C3</td>
-                        <td scope="row">R1C1</td>
-                        <td>R1C2</td>
-                        <td>R1C3</td>
-                        <td>R1C3</td>
+                        {% for producto in productos %}
+                        <td>{{ producto.numeroInventario}}</td>
+                        <td>{{ producto.tipoEquipo}}</td>
+                        <td>{{ producto.marca}}</td>
+                        <td>{{ producto.modelo}}</td>
+                        <td>{{ producto.sn}}</td>
+                        <td>{{ producto.estado}}</td>
+                        <td>{{ producto.mantenimientoLicitado}}</td>
+                        <td>{{ producto.numeroMantenedor}}</td>
+                        <td>{{ producto.numExpContratacion}}</td>
+                        <td>{{ producto.clinica}}</td>
                         <td>
                             <a name="editar" id="editar" href="{% url 'editarProducto' %}" class="btn btn-info btn-sm"
                                 role="button">Editar</a>
@@ -50,6 +51,7 @@
                                 class="btn btn-danger btn-sm" role="button">Eliminar</a>
                         </td>
                     </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>

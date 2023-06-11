@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
-
-
+from .models import Producto
+from .forms import ProductoForm
 
 # Create your views here.
 
@@ -8,10 +8,12 @@ def inicio(request):
     return render(request, 'paginas/inicio.html')
 
 def listaProductos(request):
-    return render(request, 'paginas/productos/listaProductos.html')
+    productos = Producto.objects.all()
+    return render(request, 'paginas/productos/listaProductos.html', {'productos':productos})
 
 def nuevoProducto(request):
-    return render(request, 'paginas/productos/nuevoProducto.html')
+    formulario = ProductoForm(request.POST or None)
+    return render(request, 'paginas/productos/nuevoProducto.html', {'formulario':formulario})
 
 def editarProducto(request):
     return render(request, 'paginas/productos/editarProducto.html')
