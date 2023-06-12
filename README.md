@@ -9,12 +9,14 @@ conda deactivate
 mkvirtualenv almacenDjango
 sudo systemctl start mysql
 python3 manage.py runserver
+python3 manage.py makemigrations
+python3 manage.py migrate
 
 ## Requerimientos
 - Vista inicio
 - Vista de productos
 - Vista de editar productos
-- Vista de caracteristicas del prducto 
+- Vista de caracteristicas del producto 
 
 ## Commits
 - Commit inicial: instalacion de la app y creacion de la vista inicio
