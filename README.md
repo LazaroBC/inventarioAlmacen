@@ -31,5 +31,7 @@ python3 manage.py migrate
   - 4 horas
 - Commit 6: vista inicial producto
   - 1 hora
+- Commit 7: editar productos, eliminar productos y mostrar producto
+  - 4 horas
 
   

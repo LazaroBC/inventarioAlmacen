@@ -8,8 +8,8 @@ urlpatterns = [
     path('inicio/', views.inicio, name='inicio'),
     path('listaProductos/', views.listaProductos, name='listaProductos'),
     path('nuevoProducto/', views.nuevoProducto, name='nuevoProducto'),
-    path('editarProducto/', views.editarProducto, name='editarProducto'),
-    path('eliminarProducto/', views.eliminarProducto, name='eliminarProducto'),
-    path('producto/', views.producto, name='producto'),
+    path('editarProducto/<int:id>', views.editarProducto, name='editarProducto'),
+    path('eliminarProducto/<int:id>', views.eliminarProducto, name='eliminarProducto'),
+    path('mostrarProducto/<int:id>', views.mostrarProducto, name='mostrarProducto'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

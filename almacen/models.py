@@ -15,7 +15,7 @@ class Almacen(models.Model):
 
 
 class Producto(models.Model):
-    idProducto = models.AutoField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     foto1 = models.ImageField(
         upload_to='almacen/static/img', null=True, blank=True, verbose_name= "Imagenes")
     foto2 = models.ImageField(
