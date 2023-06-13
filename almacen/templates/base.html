@@ -13,23 +13,26 @@
 
 <body class="fondo">
 
-    <nav class="navbar navbar-expand navbar-light bg-light">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{% url 'inicio' %}">Inicio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{% url 'listaProductos' %}">Lista Productos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page"  href="{% url 'nuevoProducto' %}">Nuevo Producto</a>
-            </li>
-        </ul>
+    <nav class="navbar navbar-expand navbar-light bg-light fixed-top">
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{% url 'inicio' %}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{% url 'listaProductos' %}">Lista Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{% url 'nuevoProducto' %}">Nuevo Producto</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    <div class="container-fluid">
+
+    <div class="container mt-5">
         <div class="row">
             <div class="col-12">
-                <h1 class="display-1">INVENTARIO EQUIPOS SANITARIOS</h1>
+                <h1 class="text-center display-1">INVENTARIO EQUIPOS SANITARIOS</h1>
 
                 {% block contenido %}
 

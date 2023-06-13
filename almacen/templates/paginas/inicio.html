@@ -1,48 +1,47 @@
 {% extends "base.html" %}
 
+{% load static %}
 
 {% block titulo %} Inicio {% endblock %}
 
 {% block contenido %}
 <div class="p-5 mb-4 bg-light rounded-3">
     <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">Bienvenido al inventario de Productos Sanitarios</h1>
+        <h1 class="display-5 fw-bold text-center">Bienvenido al inventario de Productos Sanitarios</h1>
         <p class="col-md-8 fs-4"></p>
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="Image Source" class="img-fluid rounded-start" alt="Card title">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h2><a href="{% url 'listaProductos' %}">Productos</a></h2>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div class="d-flex justify-content-between align-items-start">
+            <div class="card mb-3 flex-fill" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{% static 'img/productos.jpg' %}"  class="img-fluid rounded-start" alt="Card title">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="alert alert-primary text-center" role="alert">
+                                <h2><a href="{% url 'listaProductos' %}">Productos</a></h2>
+                            </div>
+                            <p class="card-text">Aquí listas todos los productos que existen en la base de datos.</p>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="Image Source" class="img-fluid rounded-start" alt="Card title">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h2><a href="{% url 'nuevoProducto' %}">Nuevo Producto</a></h2>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <div class="card mb-3 flex-fill" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{% static 'img/productoNuevo.png' %}" class="img-fluid rounded-start" alt="Card title">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="alert alert-success" role="alert">
+                                <h2><a href="{% url 'nuevoProducto' %}">Nuevo Producto</a></h2>
+                            </div>
+                            <p class="card-text">Aquí agregas un producto nuevo a la base de datos</p>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="alert alert-primary" role="alert">
-            <h2><a href="{% url 'listaProductos' %}">Productos</a></h2>
-        </div>
-        <div class="alert alert-success" role="alert">
-            <h2><a href="{% url 'nuevoProducto' %}">Nuevo Producto</a></h2>
         </div>
     </div>
 </div>
