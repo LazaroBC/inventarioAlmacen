@@ -29,5 +29,7 @@ python3 manage.py migrate
   - 1 hora
 - Commit 5: creación de acceso a los datos y formulario de creación de productos
   - 4 horas
-- Commit 6:
+- Commit 6: vista inicial producto
+  - 1 hora
+
   

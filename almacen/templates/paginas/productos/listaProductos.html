@@ -9,7 +9,7 @@
 <div class="card">
     <div class="card-header">
         <div class="alert alert-primary" role="alert">
-            <h2><a href="{% url 'listaProductos' %}">Productos</a><a>Buscador</a></h2>
+            <h2><a href="{% url 'listaProductos' %}">Productos</a><a href="{% url 'producto' %}">Buscador</a></h2>
         </div>
     </div>
     <div class="card-body">
@@ -39,7 +39,7 @@
                         <td>{{ producto.modelo}}</td>
                         <td>{{ producto.sn}}</td>
                         <td>{{ producto.estado}}</td>
-                        <td>{{ producto.mantenimientoLicitado}}</td>
+                        <td>{% if  producto.mantenimientoLicitado %} <p>Licitado</p> {% else %} <p>No licitado</p> {% endif %}</td>
                         <td>{{ producto.numeroMantenedor}}</td>
                         <td>{{ producto.numExpContratacion}}</td>
                         <td>{{ producto.clinica}}</td>

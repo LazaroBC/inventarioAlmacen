@@ -23,3 +23,6 @@ def editarProducto(request):
 
 def eliminarProducto(request):
     return redirect('listaProductos')
+
+def producto(request):
+    return render(request,'paginas/productos/producto.html')

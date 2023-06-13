@@ -1,9 +1,19 @@
 {% extends "base.html" %}
 
+{% load static %}
 
 {% block titulo %} Características producto {% endblock %}
 
 {% block contenido %}
 <h1>Características Producto</h1>
+
+<div class="card" style="width: 18rem;">
+    <img src="{% static 'img/1.png' %}" class="card-img-top" alt="imagen1"></img>
+    <img src="{% static 'img/1.png' %}" class="card-img-top" alt="imagen1"></img>
+    <img src="{% static 'img/1.png' %}" class="card-img-top" alt="imagen1"></img>
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
 
 {% endblock %}
