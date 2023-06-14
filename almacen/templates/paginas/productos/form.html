@@ -2,11 +2,16 @@
     {% csrf_token %}
     {% for campo in formulario %}
     <div class="mb-3">
-        <label for="" class="form-label">{{campo.label}}</label>
-        {% if campo.field.widget.input_type == 'file'  and campo.value %}
+        <label for="{{ campo.id_for_label }}" class="form-label">{{ campo.label }}</label>
+        {% if campo.field.widget.input_type == 'file' and campo.value %}
         <br/>
-        <img src="{{MEDIA_URL}}/img/{{campo.value}}" alt="" width="100px">
-        {% endif %}
+        <img src="{{ MEDIA_URL }}{{ campo.value.url }}" alt="" width="100px">
+        {% elif campo.field.widget.input_type == 'checkbox' %}
+        <select class="form-select" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
+            <option value="True"{% if campo.value %} selected{% endif %}>Licitado</option>
+            <option value="False"{% if not campo.value %} selected{% endif %}>No Licitado</option>
+        </select>
+        {% else %}
         <input 
             type="{{ campo.field.widget.input_type }}" 
             class="form-control" 
@@ -14,10 +19,11 @@
             id="{{ campo.id_for_label }}"
             aria-describedby="helpId" 
             placeholder="{{ campo.label }}"
-            value="{{campo.value | default_if_none:''}}">
+            value="{{ campo.value | default_if_none:'' }}">
+        {% endif %}
     </div>
     <div class="col-12 help-text">
-        {{campo.errors}}
+        {{ campo.errors }}
     </div>
     {% endfor %}
     <button type="submit" class="btn btn-success">Guardar</button>

@@ -5,22 +5,27 @@
 {% block titulo %} Características producto {% endblock %}
 
 {% block contenido %}
-<h1 class="car">Características Producto</h1>
+<h1 class="car text-center">Características Producto</h1>
 
 <div class="container">
-  <div class="row justify-content-between">
-    <div class="col-4">
+  <div class="row ">
       {% for p in producto.values %}
       <div class="card-body d-flex justify-content-between square-container">
         {% if p.foto1 %}
-        <img src="{{ MEDIA_URL }}/img/{{ p.foto1 }}" class="img-fluid" alt="imagen">
-        {% endif %}
+        <div class="col-4">
+        <img src="{{ MEDIA_URL }}/img/{{ p.foto1 }}" class="img-fluid ms-1 rounded-3 shadow-sm border-2 border-white" alt="imagen" width="300px">
+      </div>
+      {% endif %}
         {% if p.foto2 %}
-        <img src="{{ MEDIA_URL }}/img/{{ p.foto2 }}" class="img-fluid" alt="imagen">
-        {% endif %}
+        <div class="col-4">
+        <img src="{{ MEDIA_URL }}/img/{{ p.foto2 }}" class="img-fluid ms-1 rounded-3 shadow-sm border-2 border-white" alt="imagen" width="300px"> 
+      </div>
+      {% endif %}
         {% if p.foto3 %}
-        <img src="{{ MEDIA_URL }}/img/{{ p.foto3 }}" class="img-fluid" alt="imagen">
-        {% endif %}
+        <div class="col-4">
+        <img src="{{ MEDIA_URL }}/img/{{ p.foto3 }}" class="img-fluid ms-1 rounded-3 shadow-sm border-2 border-white" alt="imagen" width="300px">
+        </div>
+      {% endif %}
       </div>
     </div>
     {% endfor %}
@@ -31,32 +36,45 @@
 
 
 <div class="card-body">
-  <ul class="list-group">
+  
     {% for p in producto.values %}
-    <li class="list-group-item">Tipo de equipo:{{ p.tipoEquipo }}</li>
-    <li class="list-group-item">Subtipo de equipo:{{p.subtipoEquipo}}</li>
-    <li class="list-group-item">Número de inventario:{{p.numeroInventario}}</li>
-    <li class="list-group-item">{{p.mantenimientoLicitado}}</li>
-    <li class="list-group-item">Número de Mantenedor:{{p.numeroMantenedor}}</li>
-    <li class="list-group-item">Marca:{{p.marca}}</li>
-    <li class="list-group-item">Modelo:{{p.modelo}}</li>
-    <li class="list-group-item">Año de fabricación:{{p.anyoFabricacion}}</li>
-    <li class="list-group-item">SN:{{p.sn}}</li>
-    <li class="list-group-item">NREF:{{p.nref}}</li>
-    <li class="list-group-item">Descripción:{{p.descripcion}}</li>
-    <li class="list-group-item">Comentarios:{{p.comentarios}}</li>
-    <li class="list-group-item">Estado:{{p.estado}}</li>
-    <li class="list-group-item">Año de compra:{{p.anyoCompra}}</li>
-    <li class="list-group-item">Número de contratación:{{p.numExpContratacion}}</li>
-    <li class="list-group-item">Tiquet de referencia del mantenedor:{{p.tiquetsReferenciaMantenedor}}</li>
-    <li class="list-group-item">Tiquet de referencia del mantenimiento UV:{{p.tiquetsReferenciaMantUV}}</li>
-    <li class="list-group-item">Tiquet de refrencia de TiquetingFLA:{{p.tiquetsRefTiquetingFLA}}</li>
-    <li class="list-group-item">Otros:{{p.otros}}</li>
-    <li class="list-group-item">Clínica:{{p.clinica}}</li>
-    <li class="list-group-item">Ubicación:{{p.ubicacion}}</li>
-    <li class="list-group-item"></li>
-    {% endfor %}
+    <ul class="list-group list-group list-group-horizontal">
+    <li class="list-group-item flex-fill">Tipo de equipo:{{ p.tipoEquipo }}</li>
+    <li class="list-group-item flex-fill">Subtipo de equipo:{{p.subtipoEquipo}}</li>
+    <li class="list-group-item flex-fill">Número de inventario:{{p.numeroInventario}}</li>
+    </ul>
+    <ul class="list-group list-group list-group-horizontal">
+    <li class="list-group-item flex-fill">{% if  p.mantenimientoLicitado %} <p>Licitado</p> {% else %} <p>No licitado</p> {% endif %}</li>
+    <li class="list-group-item flex-fill">Número de Mantenedor:{{p.numeroMantenedor}}</li>
+    <li class="list-group-item flex-fill">Marca:{{p.marca}}</li>
   </ul>
+  <ul class="list-group list-group list-group-horizontal">
+    <li class="list-group-item flex-fill">Modelo:{{p.modelo}}</li>
+    <li class="list-group-item flex-fill">Año de fabricación:{{p.anyoFabricacion}}</li>
+    <li class="list-group-item flex-fill">SN:{{p.sn}}</li>
+  </ul>
+  <ul class="list-group list-group list-group-horizontal">
+    <li class="list-group-item flex-fill">NREF:{{p.nref}}</li>
+    <li class="list-group-item flex-fill">Descripción:{{p.descripcion}}</li>
+    <li class="list-group-item flex-fill">Comentarios:{{p.comentarios}}</li>
+  </ul>
+  <ul class="list-group list-group list-group-horizontal">
+    <li class="list-group-item flex-fill">Estado:{{p.estado}}</li>
+    <li class="list-group-item flex-fill">Año de compra:{{p.anyoCompra}}</li>
+    <li class="list-group-item flex-fill">Número de contratación:{{p.numExpContratacion}}</li>
+  </ul>
+  <ul class="list-group list-group list-group-horizontal">
+    <li class="list-group-item flex-fill">Tiquet de referencia del mantenedor:{{p.tiquetsReferenciaMantenedor}}</li>
+    <li class="list-group-item flex-fill">Tiquet de referencia del mantenimiento UV:{{p.tiquetsReferenciaMantUV}}</li>
+    <li class="list-group-item flex-fill">Tiquet de refrencia de TiquetingFLA:{{p.tiquetsRefTiquetingFLA}}</li>
+  </ul>
+  <ul class="list-group list-group list-group-horizontal">
+    <li class="list-group-item flex-fill">Otros:{{p.otros}}</li>
+    <li class="list-group-item flex-fill">Clínica:{{p.clinica}}</li>
+    <li class="list-group-item flex-fill">Ubicación:{{p.ubicacion}}</li>
+  </ul>
+    {% endfor %}
+  
 </div>
 
 </div>

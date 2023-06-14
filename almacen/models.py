@@ -29,7 +29,7 @@ class Producto(models.Model):
     numeroInventario = models.IntegerField(
         null=True, blank=True, verbose_name="Numero de Inventario")
     mantenimientoLicitado = models.BooleanField(
-        null=True, blank=True, verbose_name="Mantenimiento Licitado")
+        null=False, blank=False, verbose_name="Mantenimiento Licitado")
     numeroMantenedor = models.IntegerField(
         null=True, blank=True, verbose_name="Numero de Mantenedor")
     marca = models.CharField(null=True, blank=True, max_length=1000, verbose_name="Marca")
