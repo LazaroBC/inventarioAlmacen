@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.core.validators import MaxValueValidator
 # Create your models here.
 
 
@@ -24,36 +24,27 @@ class Producto(models.Model):
         upload_to='almacen/static/img', null=True, blank=True, verbose_name= "Imagenes")
     manualInstrucciones = models.FileField(
         upload_to='almacen/static/docs', null=True, blank=True, verbose_name= "Documentos")
-    tipoEquipo = models.CharField(null=True, blank=True, max_length=1000)
-    subtipoEquipo = models.CharField(null=True, blank=True, max_length=1000)
-    numeroInventario = models.IntegerField(
-        null=True, blank=True, verbose_name="Numero de Inventario")
-    mantenimientoLicitado = models.BooleanField(
-        null=False, blank=False, verbose_name="Mantenimiento Licitado")
-    numeroMantenedor = models.IntegerField(
-        null=True, blank=True, verbose_name="Numero de Mantenedor")
-    marca = models.CharField(null=True, blank=True, max_length=1000, verbose_name="Marca")
-    modelo = models.CharField(null=True, blank=True, max_length=1000, verbose_name="Modelo")
-    anyoFabricacion = models.IntegerField(
-        null=True, blank=True, verbose_name="Año de Fabricacion")
-    sn = models.CharField(null=True, blank=True, max_length=1000, verbose_name="SN")
-    nref = models.CharField(null=True, blank=True, max_length=1000, verbose_name="NREF")
-    descripcion = models.CharField(null=True, blank=True, max_length=1000, verbose_name="Descripcion")
-    comentarios = models.CharField(null=True, blank=True, max_length=1000, verbose_name="Comentarios")
-    estado = models.CharField(null=True, blank=True, max_length=1000, verbose_name="Estado")
-    anyoCompra = models.IntegerField(
-        null=True, blank=True, verbose_name="Año de Compra")
-    numExpContratacion = models.IntegerField(
-        null=True, blank=True, verbose_name="Numero de Expediente de Contratacion")
-    tiquetsReferenciaMantenedor = models.IntegerField(
-        null=True, blank=True, verbose_name="Tiquets de Referencia del Mantenedor")
-    tiquetsReferenciaMantUV = models.IntegerField(
-        null=True, blank=True, verbose_name="Tiquets de Referencia del Mantenedor UV")
-    tiquetsRefTiquetingFLA = models.IntegerField(
-        null=True, blank=True, verbose_name="Tiquets de Referencia del Tiqueting FLA")
-    otros = models.CharField(null=True, blank=True, max_length=1000, verbose_name="Otros")
-    clinica = models.CharField(null=True, blank=True, max_length=1000, verbose_name="Clinica")
-    ubicacion = models.CharField(null=True, blank=True, max_length=1000, verbose_name="Ubicacion")
+    tipoEquipo = models.TextField(null=False, blank=False, verbose_name="Tipo de Equipo")
+    subtipoEquipo = models.TextField(null=True, blank=True, verbose_name="Subtipo de Equipo")
+    numeroInventario = models.TextField(null=False, blank=False, verbose_name="Numero de Inventario")
+    mantenimientoLicitado = models.BooleanField(null=False, blank=False, verbose_name="Mantenimiento Licitado")
+    numeroMantenedor = models.IntegerField(null=True, blank=True, validators=[MaxValueValidator(9999)], verbose_name="Numero de Mantenedor")
+    marca = models.TextField(null=False, blank=False, verbose_name="Marca")
+    modelo = models.TextField(null=False, blank=False, verbose_name="Modelo")
+    anyoFabricacion = models.IntegerField(null=True, blank=True,  validators=[MaxValueValidator(9999)], verbose_name="Año de Fabricacion")
+    sn = models.TextField(null=False, blank=False, verbose_name="SN")
+    nref = models.TextField(null=True, blank=True, verbose_name="NREF")
+    descripcion = models.TextField(null=True, blank=True, verbose_name="Descripcion")
+    comentarios = models.TextField(null=True, blank=True, verbose_name="Comentarios")
+    estado = models.TextField(null=True, blank=True, verbose_name="Estado")
+    anyoCompra = models.IntegerField(null=True, blank=True, validators=[MaxValueValidator(9999)],verbose_name="Año de Compra")
+    numExpContratacion = models.TextField(null=True, blank=True, verbose_name="Numero de Expediente de Contratacion")
+    tiquetsReferenciaMantenedor = models.TextField(null=True, blank=True, verbose_name="Tiquets de Referencia del Mantenedor")
+    tiquetsReferenciaMantUV = models.TextField(null=True, blank=True, verbose_name="Tiquets de Referencia del Mantenedor UV")
+    tiquetsRefTiquetingFLA = models.TextField(null=True, blank=True, verbose_name="Tiquets de Referencia del Tiqueting FLA")
+    otros = models.TextField(null=True, blank=True, verbose_name="Otros")
+    clinica = models.TextField(null=True, blank=True, verbose_name="Clinica")
+    ubicacion = models.TextField(null=True, blank=True, verbose_name="Ubicacion")
 
     def __str__(self):
         return self.tipoEquipo
