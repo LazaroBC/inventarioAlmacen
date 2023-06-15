@@ -33,8 +33,9 @@
         {% endif %}
     </div>
     <div class="col-12 help-text">
-        {{ campo.errors }}
-    </div>
-    {% endfor %}
-    <button type="submit" class="btn btn-success">Guardar</button>
+        {% if campo.errors %}
+        <div class="alert alert-danger" style="width: 40%;" role="alert">{{ campo.errors }}</div>
+        {% endif %}
+        {% endfor %}
+        <button type="submit" class="btn btn-success">Guardar</button>
 </form>

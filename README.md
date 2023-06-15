@@ -35,7 +35,9 @@ python3 manage.py migrate
   - 4 horas
 - Commit 8: Cambios en todas las vistas, busqueda
   - 6 horas
-- Commit 9: Cambios requerimientos BBDD y cambiosn en desplegables de  form 
+- Commit 9: Cambios requerimientos BBDD y cambios en desplegables de form  y vistas varias
   - 6 horas
+- Commit 10: Cambios en la vista de inicio y en la vista de productos
+  - 2 horas
   
   

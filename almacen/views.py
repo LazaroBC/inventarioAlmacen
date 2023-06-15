@@ -32,5 +32,4 @@ def eliminarProducto(request,id):
 
 def mostrarProducto(request,id):
     producto = Producto.objects.all().filter(id=id)
-    print(producto.values())
     return render(request,'paginas/productos/mostrarProducto.html', {'producto':producto})
