@@ -1,5 +1,6 @@
 body {
     margin: 5% 5% 5% 5%;
+    
 }
 
 .fondo {
@@ -11,4 +12,12 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+}
+
+.card-body li {
+    display: inline-block;
+    width: 33.33%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    text-align: center;
 }

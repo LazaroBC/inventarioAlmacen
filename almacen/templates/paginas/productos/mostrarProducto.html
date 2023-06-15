@@ -39,39 +39,110 @@
   
     {% for p in producto.values %}
     <ul class="list-group list-group list-group-horizontal">
-    <li class="list-group-item flex-fill">Tipo de equipo:{{ p.tipoEquipo }}</li>
-    <li class="list-group-item flex-fill">Subtipo de equipo:{{p.subtipoEquipo}}</li>
-    <li class="list-group-item flex-fill">Número de inventario:{{p.numeroInventario}}</li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p class="font-weight-bold">Tipo de equipo:</p>
+      <span>{{ p.tipoEquipo }}</span>
+        </li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p class="font-weight-bold">Subtipo de equipo:</p>
+      <span>{{ p.tipoEquipo }}</span>
+
+      </li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>Número de inventario:</p>
+      <span class="font-weight-bold">{{ p.tipoEquipo }}</span>
+
+      </li>
     </ul>
     <ul class="list-group list-group list-group-horizontal">
-    <li class="list-group-item flex-fill">{% if  p.mantenimientoLicitado %} <p>Licitado</p> {% else %} <p>No licitado</p> {% endif %}</li>
-    <li class="list-group-item flex-fill">Número de Mantenedor:{{p.numeroMantenedor}}</li>
-    <li class="list-group-item flex-fill">Marca:{{p.marca}}</li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      {% if  p.mantenimientoLicitado %} 
+        <p>Licitado</p> 
+        {% else %} 
+          <p>No licitado</p> 
+      {% endif %}</li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>Número de Mantenedor:</p>
+      <span>{{p.numeroMantenedor}}</span></li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>Marca:</p>
+      <span>{{p.marca}}</span></li>
   </ul>
   <ul class="list-group list-group list-group-horizontal">
-    <li class="list-group-item flex-fill">Modelo:{{p.modelo}}</li>
-    <li class="list-group-item flex-fill">Año de fabricación:{{p.anyoFabricacion}}</li>
-    <li class="list-group-item flex-fill">SN:{{p.sn}}</li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>Modelo:</p>
+      <span>{{p.modelo}}</span>
+    </li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>Año de fabricación:</p>
+      <span>{{p.anyoFabricacion}}</span>
+    </li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>SN:</p>
+      <span>{{p.sn}}</span>
+    </li>
   </ul>
   <ul class="list-group list-group list-group-horizontal">
-    <li class="list-group-item flex-fill">NREF:{{p.nref}}</li>
-    <li class="list-group-item flex-fill">Descripción:{{p.descripcion}}</li>
-    <li class="list-group-item flex-fill">Comentarios:{{p.comentarios}}</li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>NREF:</p>
+      <span>{{p.nref}}</span>
+    </li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>Descripción:</p>
+      <span>{{p.descripcion}}</span>
+    </li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>Comentarios:</p>
+      <span>{{p.comentarios}}</span>
+    </li>
   </ul>
   <ul class="list-group list-group list-group-horizontal">
-    <li class="list-group-item flex-fill">Estado:{{p.estado}}</li>
-    <li class="list-group-item flex-fill">Año de compra:{{p.anyoCompra}}</li>
-    <li class="list-group-item flex-fill">Número de contratación:{{p.numExpContratacion}}</li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>Estado:</p>
+      <span>{{p.estado}}</span>
+    </li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>Año de compra:</p>
+      <span>{{p.anyoCompra}}</span>
+    </li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>Número de contratación:</p>
+      </span>{{p.numExpContratacion}}</span>
+    </li>
+
   </ul>
   <ul class="list-group list-group list-group-horizontal">
-    <li class="list-group-item flex-fill">Tiquet de referencia del mantenedor:{{p.tiquetsReferenciaMantenedor}}</li>
-    <li class="list-group-item flex-fill">Tiquet de referencia del mantenimiento UV:{{p.tiquetsReferenciaMantUV}}</li>
-    <li class="list-group-item flex-fill">Tiquet de refrencia de TiquetingFLA:{{p.tiquetsRefTiquetingFLA}}</li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>Tiquet de referencia del mantenedor:</p>
+      <span>{{p.tiquetsReferenciaMantenedor}}</span>
+
+      </li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>Tiquet de referencia del mantenimiento UV:</p>
+      <span>{{p.tiquetsReferenciaMantUV}}</span>
+
+      </li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>Tiquet de refrencia de TiquetingFLA:</p>
+      <span>{{p.tiquetsRefTiquetingFLA}}</span>
+
+      </li>
   </ul>
   <ul class="list-group list-group list-group-horizontal">
-    <li class="list-group-item flex-fill">Otros:{{p.otros}}</li>
-    <li class="list-group-item flex-fill">Clínica:{{p.clinica}}</li>
-    <li class="list-group-item flex-fill">Ubicación:{{p.ubicacion}}</li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>Otros:</p>
+      <span>{{p.otros}}</span>
+      </li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>Clínica:</p>
+      <span>{{p.clinica}}</span>
+
+      </li>
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+      <p>Ubicación:</p>
+      <span>{{p.ubicacion}}</span>
+
+      </li>
   </ul>
     {% endfor %}
   
