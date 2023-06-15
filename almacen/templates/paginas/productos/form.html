@@ -6,6 +6,14 @@
         {% if campo.field.widget.input_type == 'file' and campo.value %}
         <br/>
         <img src="{{ MEDIA_URL }}{{ campo.value.url }}" alt="" width="100px">
+        <input 
+            type="{{ campo.field.widget.input_type }}" 
+            class="form-control" 
+            name="{{ campo.name }}" 
+            id="{{ campo.id_for_label }}"
+            aria-describedby="helpId" 
+            placeholder="{{ campo.label }}"
+            value="{{ campo.value | default_if_none:'' }}">
         {% elif campo.field.widget.input_type == 'checkbox' %}
         <select class="form-select" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
             <option value="True"{% if campo.value %} selected{% endif %}>Licitado</option>
