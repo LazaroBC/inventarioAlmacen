@@ -14,6 +14,30 @@
             <option value="True" {% if campo.value %} selected{% endif %}>Licitado</option>
             <option value="False" {% if not campo.value %} selected{% endif %}>No Licitado</option>
         </select>
+        {% elif campo.name == 'tipoEquipo' %}
+        <select class="form-select" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
+            <option value="">Seleccione un tipo de equipo</option>
+            <option value="COMPRESOR">COMPRESOR</option>
+            <option value="CINTA CORRER">CINTA CORRER</option>
+            <option value="EQUIPAMIENTO ORTOPODOLOGICO">EQUIPAMIENTO ORTOPODOLOGICO</option>
+            <option value="ESTERILIZADOR">ESTERILIZADOR</option>
+            <option value="LAVAVAJILLAS">LAVAVAJILLAS</option>
+            <option value="EQUIPAMIENTO ODONTOLÓGICO">EQUIPAMIENTO ODONTOLÓGICO</option>
+            <option value="LOCALIZADOR ÁPICES">LOCALIZADOR ÁPICES</option>
+            <option value="MANIQUÍ DENTAL">MANIQUÍ DENTAL</option>
+            <option value="RECORTADORA">RECORTADORA</option>
+            <option value="MESAS ODONTOLÓGICAS">MESAS ODONTOLÓGICAS</option>
+            <option value="REGULADOR VELOCIDAD">REGULADOR VELOCIDAD</option>
+            <option value="MOTOR ASPIRACIÓN">MOTOR ASPIRACIÓN</option>
+            <option value="COMPRESOR">COMPRESOR</option>
+            <option value="PULIDORA">PULIDORA</option>
+            <option value="OSMOSIS">OSMOSIS</option>
+            <option value="IMAGEN DIAGNOSTICA">IMAGEN DIAGNOSTICA</option>
+            <option value="REVELADORA">COMPRESOR</option>
+            <option value="TERMOSELLADORA">TERMOSELLADORA</option>
+            <option value="SILLON DENTAL">SILLON DENTAL</option>
+            <option value="SILLON PODOLOGICO">SILLON PODOLOGICO</option>
+        </select>
         {% elif campo.name == 'clinica' %}
         <select class="form-select" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
             <option value="">Seleccione una clínica</option>
@@ -23,8 +47,10 @@
         {% elif campo.name == 'estado' %}
         <select class="form-select" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
             <option value="">Seleccione un estado</option>
-            <option value="Odontologia">Perfecto</option>
-            <option value="Psicología">No óptimo</option>
+            <option value="En funcionamiento">En funcionamiento</option>
+            <option value="Parado">Parado</option>
+            <option value="Estropeado">Estropeado</option>
+            <option value="En reparación">En reparación</option>
         </select>
         {% else %}
         <input type="{{ campo.field.widget.input_type }}" class="form-control" name="{{ campo.name }}"

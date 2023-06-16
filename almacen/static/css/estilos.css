@@ -1,4 +1,3 @@
-
 .fondo {
     background-color: #20a5c0;
     font-family: 'Roboto', sans-serif;
@@ -16,4 +15,9 @@
     box-sizing: border-box;
     border: 1px solid black;
     text-align: center;
+}
+
+.mt-custom {
+    position: fixed;
+    margin-top: 100px;
 }
