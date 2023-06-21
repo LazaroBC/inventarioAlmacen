@@ -9,6 +9,29 @@
         <input type="{{ campo.field.widget.input_type }}" class="form-control" name="{{ campo.name }}"
             id="{{ campo.id_for_label }}" aria-describedby="helpId" placeholder="{{ campo.label }}"
             value="{{ campo.value | default_if_none:'' }}">
+        {% elif campo.name == 'tipoEquipo' %}
+        <select class="form-select" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
+            <option value="">Seleccione un tipo de equipo</option>
+            <option value="COMPRESOR">COMPRESOR</option>
+            <option value="CINTA CORRER">CINTA CORRER</option>
+            <option value="EQUIPAMIENTO ORTOPODOLÓGICO">EQUIPAMIENTO ORTOPODOLÓGICO</option>
+            <option value="ESTERILIZADOR">ESTERILIZADOR</option>
+            <option value="LAVAVAJILLAS">LAVAVAJILLAS</option>
+            <option value="EQUIPAMIENTO ODONTOLÓGICO">EQUIPAMIENTO ODONTOLÓGICO</option>
+            <option value="LOCALIZADOR ÁPICES">LOCALIZADOR ÁPICES</option>
+            <option value="MANIQUÍ DENTAL">MANIQUÍ DENTAL</option>
+            <option value="RECORTADORA">RECORTADORA</option>
+            <option value="MESAS ODONTOLÓGICAS">MESAS ODONTOLÓGICAS</option>
+            <option value="REGULADOR VELOCIDAD">REGULADOR VELOCIDAD</option>
+            <option value="MOTOR ASPIRACIÓN">MOTOR ASPIRACIÓN</option>
+            <option value="PULIDORA">PULIDORA</option>
+            <option value="OSMOSIS">OSMOSIS</option>
+            <option value="IMAGEN DIAGNÓSTICA">IMAGEN DIAGNÓSTICA</option>
+            <option value="REVELADORA">REVELADORA</option>
+            <option value="TERMOSELLADORA">TERMOSELLADORA</option>
+            <option value="SILLÓN DENTAL">SILLÓN DENTAL</option>
+            <option value="SILLÓN PODOLÓGICO">SILLÓN PODOLÓGICO</option>
+        </select>
         {% elif campo.field.widget.input_type == 'checkbox' %}
         <select class="form-select" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
             <option value="True" {% if campo.value %} selected{% endif %}>Licitado</option>
@@ -23,8 +46,10 @@
         {% elif campo.name == 'estado' %}
         <select class="form-select" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
             <option value="">Seleccione un estado</option>
-            <option value="Odontologia">Perfecto</option>
-            <option value="Psicología">No óptimo</option>
+            <option value="En funcionamiento">En funcionamiento</option>
+            <option value="Parado">Parado</option>
+            <option value="Estropeado">Estropeado</option>
+            <option value="En reparación">En reparación</option>
         </select>
         {% else %}
         <input type="{{ campo.field.widget.input_type }}" class="form-control" name="{{ campo.name }}"
