@@ -5,12 +5,15 @@
 
 {% block contenido %}
 
-<div clas="card">
-    <div class="card-header">
-        <h1>Nuevo producto</h1>
+<div class="d-flex justify-content-center align-items-center pb-4">
+    <div class="card-header text-center rounded-3 shadow-sm border-2 border-white"
+        style="background-color: blanchedalmond;width: 50%; font-family: 'Lato';">
+        <h2>Nuevo producto</h2>
+        <h4>Ingrese los datos del producto</h4>
     </div>
+</div>
+<div class="">
     <div class="card-body">
-        <h4 class="card-title">Ingrese los datos del producto</h4>
         {% include "paginas/productos/form.html" %}
     </div>
 </div>
