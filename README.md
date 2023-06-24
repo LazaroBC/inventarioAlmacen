@@ -40,5 +40,14 @@ python3 manage.py migrate
 - Commit 10: Cambios en la vista de inicio y en la vista de productos
   - 2 horas
 - Commit 11: Pequeños detalles en html y css
+  - 3 horas
+  
+
+
+
+
+## Siguiente:
+- Crear desplegables en el formulario de creación de productos
+- crear modelos de las listas desplegables
   
   
