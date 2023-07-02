@@ -173,17 +173,5 @@ cython_debug/
 
 # End of https://www.toptal.com/developers/gitignore/api/django
 # MEDIA
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.ico
-*.doc
-*.pdf
-*.odt
-*.docx
-*.php
-
-# Carpeta files
-files/
-```
+media/almacen/static/docs/*.*
+media/almacen/static/img/*.*
