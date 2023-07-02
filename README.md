@@ -41,6 +41,8 @@ python3 manage.py migrate
   - 2 horas
 - Commit 11: Pequeños detalles en html y css
   - 3 horas
+- Commit 12: Cambios en models validators y alguna pequeña vista de botones
+  - 2 horas
   
 
 

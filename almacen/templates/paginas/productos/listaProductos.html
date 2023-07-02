@@ -1,11 +1,17 @@
 {% extends "base.html" %}
 
+{% load static %}
 
 {% block titulo %} Listado productos {% endblock %}
 
 {% block contenido %}
 
-
+<div class="d-flex justify-content-center align-items-center pb-4">
+    <div class="card-header text-center rounded-3 shadow-sm border-2 border-white"
+      style="background-color: blanchedalmond;width: 50%; font-family: 'Lato';">
+      <h1>Listado</h1>
+    </div>
+  </div>
 <div class="card">
     <div class="card-header">
         <div class="alert alert-primary" role="alert">
@@ -64,7 +70,7 @@
 
     </div>
     <div class="card-footer text-muted">
-        <a href="#">ARRIBA</a>
+        <button class="arriba" href="#">SUBIR</button>
     </div>
 </div>
 

@@ -163,7 +163,12 @@
   {% endfor %}
 
 </div>
-
+{% for p in producto.values %}
+<a name="editar" style="width: 50%;" id="editar" href="{% url 'editarProducto' p.id %}" class="btn btn-info btn-sm ms-1 rounded-3 shadow-sm border-2 border-white mx-auto"
+                                role="button">Editar</a>
+{% endfor %}
+<a name="cancelar" style="width: 50%;" id="cancelar" href="{% url 'listaProductos' %}" class="btn btn-success btn-sm ms-1 rounded-3 shadow-sm border-2 border-white mx-auto"
+                                role="button">Cancelar</a>
 </div>
 
 {% endblock %}
