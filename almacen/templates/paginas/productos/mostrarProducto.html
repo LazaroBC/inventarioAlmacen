@@ -53,16 +53,16 @@
   {% for p in producto.values %}
   <ul class="list-group list-group list-group-horizontal">
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p class="font-weight-bold">Tipo de equipo:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Tipo de equipo:</p>
       <span>{{ p.tipoEquipo }}</span>
     </li>
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p class="font-weight-bold">Subtipo de equipo:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Subtipo de equipo:</p>
       <span>{{ p.subtipoEquipo }}</span>
 
     </li>
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>Número de inventario:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Número de inventario:</p>
       <span class="font-weight-bold">{{ p.numeroInventario }}</span>
 
     </li>
@@ -70,92 +70,92 @@
   <ul class="list-group list-group list-group-horizontal">
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
       {% if p.mantenimientoLicitado %}
-      <p>Licitado</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Licitado</p>
       {% else %}
-      <p>No licitado</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">No licitado</p>
       {% endif %}
     </li>
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>Número de Mantenedor:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Número de Mantenedor:</p>
       <span>{{p.numeroMantenedor}}</span>
     </li>
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>Marca:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Marca:</p>
       <span>{{p.marca}}</span>
     </li>
   </ul>
   <ul class="list-group list-group list-group-horizontal">
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>Modelo:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Modelo:</p>
       <span>{{p.modelo}}</span>
     </li>
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>Año de fabricación:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Año de fabricación:</p>
       <span>{{p.anyoFabricacion}}</span>
     </li>
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>SN:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">SN:</p>
       <span>{{p.sn}}</span>
     </li>
   </ul>
   <ul class="list-group list-group list-group-horizontal">
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>NREF:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">NREF:</p>
       <span>{{p.nref}}</span>
     </li>
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>Descripción:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Descripción:</p>
       <span>{{p.descripcion}}</span>
     </li>
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>Comentarios:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Comentarios:</p>
       <span>{{p.comentarios}}</span>
     </li>
   </ul>
   <ul class="list-group list-group list-group-horizontal">
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>Estado:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Estado:</p>
       <span>{{p.estado}}</span>
     </li>
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>Año de compra:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Año de compra:</p>
       <span>{{p.anyoCompra}}</span>
     </li>
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>Número de contratación:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Número de contratación:</p>
       </span>{{p.numExpContratacion}}</span>
     </li>
 
   </ul>
   <ul class="list-group list-group list-group-horizontal">
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>Tiquet de referencia del mantenedor:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Tiquet de referencia del mantenedor:</p>
       <span>{{p.tiquetsReferenciaMantenedor}}</span>
 
     </li>
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>Tiquet de referencia del mantenimiento UV:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Tiquet de referencia del mantenimiento UV:</p>
       <span>{{p.tiquetsReferenciaMantUV}}</span>
 
     </li>
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>Tiquet de refrencia de TiquetingFLA:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Tiquet de refrencia de TiquetingFLA:</p>
       <span>{{p.tiquetsRefTiquetingFLA}}</span>
 
     </li>
   </ul>
   <ul class="list-group list-group list-group-horizontal">
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>Otros:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Otros:</p>
       <span>{{p.otros}}</span>
     </li>
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>Clínica:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Clínica:</p>
       <span>{{p.clinica}}</span>
 
     </li>
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
-      <p>Ubicación:</p>
+      <p class="font-weight-bold" style="font-size: 1.2rem;">Ubicación:</p>
       <span>{{p.ubicacion}}</span>
 
     </li>
@@ -163,12 +163,15 @@
   {% endfor %}
 
 </div>
-{% for p in producto.values %}
-<a name="editar" style="width: 50%;" id="editar" href="{% url 'editarProducto' p.id %}" class="btn btn-info btn-sm ms-1 rounded-3 shadow-sm border-2 border-white mx-auto"
-                                role="button">Editar</a>
-{% endfor %}
-<a name="cancelar" style="width: 50%;" id="cancelar" href="{% url 'listaProductos' %}" class="btn btn-success btn-sm ms-1 rounded-3 shadow-sm border-2 border-white mx-auto"
-                                role="button">Cancelar</a>
+<div style="text-align: center;">
+  {% for p in producto.values %}
+  <a name="editar" style="width: 50%;" id="editar" href="{% url 'editarProducto' p.id %}"
+    class="btn btn-info btn-sm ms-1 rounded-3 shadow-sm border-2 border-white mx-auto" 
+    role="button" style="display: inline-block;">Editar</a>
+  {% endfor %}
+  <a name="cancelar" style="width: 50%;" id="cancelar" href="{% url 'listaProductos' %}"
+    class="btn btn-success btn-sm ms-1 rounded-3 shadow-sm border-2 border-white mx-auto" 
+    role="button" style="display: inline-block;">Cancelar</a>
 </div>
-
+</div>
 {% endblock %}

@@ -183,3 +183,7 @@ cython_debug/
 *.odt
 *.docx
 *.php
+
+# Carpeta files
+files/*.*
+```
