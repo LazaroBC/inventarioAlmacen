@@ -45,8 +45,14 @@
 </div>
 </div>
 
-
-
+{% for p in producto.values %}
+{% if p.manualInstrucciones %}
+<div class="col-1">
+  <img src="{{ MEDIA_URL }}/docs/{{ p.manualInstrucciones }}" class="img-fluid ms-1 rounded-3 shadow-sm border-2 border-white"
+    alt="imagen" width="150px">
+</div>
+{% endif %}
+{% endfor %}
 
 <div class="card-body">
 
@@ -166,12 +172,12 @@
 <div style="text-align: center;">
   {% for p in producto.values %}
   <a name="editar" style="width: 50%;" id="editar" href="{% url 'editarProducto' p.id %}"
-    class="btn btn-info btn-sm ms-1 rounded-3 shadow-sm border-2 border-white mx-auto" 
-    role="button" style="display: inline-block;">Editar</a>
+    class="btn btn-info btn-sm ms-1 rounded-3 shadow-sm border-2 border-white mx-auto" role="button"
+    style="display: inline-block;">Editar</a>
   {% endfor %}
   <a name="cancelar" style="width: 50%;" id="cancelar" href="{% url 'listaProductos' %}"
-    class="btn btn-success btn-sm ms-1 rounded-3 shadow-sm border-2 border-white mx-auto" 
-    role="button" style="display: inline-block;">Cancelar</a>
+    class="btn btn-success btn-sm ms-1 rounded-3 shadow-sm border-2 border-white mx-auto" role="button"
+    style="display: inline-block;">Cancelar</a>
 </div>
 </div>
 {% endblock %}

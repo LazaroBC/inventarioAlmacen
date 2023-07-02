@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.validators import MaxValueValidator, MinValueValidator
+from django.core.validators import MaxValueValidator, MinValueValidator, FileExtensionValidator, ValidationError
 # Create your models here.
 
 
@@ -13,6 +13,10 @@ class Almacen(models.Model):
     def __str__(self):
         return self.nombreAlmacen
 
+def validate_pdf(value):
+    ext = value.name.split('.')[-1]
+    if ext.lower() != 'pdf':
+        raise ValidationError('Solo se admiten archivos PDF')
 
 class Producto(models.Model):
     id = models.AutoField(primary_key=True)
@@ -23,7 +27,7 @@ class Producto(models.Model):
     foto3 = models.ImageField(
         upload_to='almacen/static/img', null=True, blank=True, verbose_name= "Imagenes")
     manualInstrucciones = models.FileField(
-        upload_to='almacen/static/docs', null=True, blank=True, verbose_name= "Documentos")
+        upload_to='almacen/static/docs', null=True, blank=True, validators=[validate_pdf], verbose_name= "Documentos")
     tipoEquipo = models.TextField(null=False, blank=False, verbose_name="Tipo de Equipo")
     subtipoEquipo = models.TextField(null=True, blank=True, verbose_name="Subtipo de Equipo")
     numeroInventario = models.TextField(null=False, blank=False, verbose_name="Numero de Inventario")

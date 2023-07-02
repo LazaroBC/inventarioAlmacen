@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import Producto
 from .forms import ProductoForm
+from pdf2image import convert_from_path
 
 # Create your views here.
 
@@ -33,3 +34,19 @@ def eliminarProducto(request,id):
 def mostrarProducto(request,id):
     producto = Producto.objects.all().filter(id=id)
     return render(request,'paginas/productos/mostrarProducto.html', {'producto':producto})
+
+# def mostrarProducto(request, id):
+#     # producto2 = Producto.objects.get(id=id)
+#     producto = Producto.objects.all().filter(id=id)
+# 
+#     if producto.manualInstrucciones:
+#         ruta_pdf = producto.manualInstrucciones.path
+#         
+#         imagenes = convert_from_path(ruta_pdf, first_page=0, last_page=1)
+#         
+#         ruta_imagen_temporal = "almacen/static/files/imagen.png"
+#         imagenes[0].save(ruta_imagen_temporal, "png")
+#         
+#         return render(request, 'paginas/productos/mostrarProducto.html', {'producto': producto, 'ruta_imagen': ruta_imagen_temporal})
+#     
+#     return render(request, 'paginas/productos/mostrarProducto.html', {'producto': producto})
