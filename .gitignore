@@ -185,5 +185,5 @@ cython_debug/
 *.php
 
 # Carpeta files
-files/*.*
+files/
 ```
