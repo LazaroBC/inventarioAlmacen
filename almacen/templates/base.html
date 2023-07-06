@@ -68,7 +68,15 @@
       });
     });
     </script>
-
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script>
+    $(document).ready(function() {
+      $('.arriba').click(function() {
+        $('html, body').animate({scrollTop: 0}, 'fast');
+        return false;
+      });
+    });
+    </script>
 </body>
 
 </html>
