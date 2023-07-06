@@ -4,13 +4,14 @@
 {% block titulo %} Editar producto {% endblock %}
 
 {% block contenido %}
+
 <div class="d-flex justify-content-center align-items-center pb-4">
     <div class="card-header text-center rounded-3 shadow-sm border-2 border-white"
         style="background-color: blanchedalmond;width: 50%; font-family: 'Lato';">
-        <h2>Editar producto: {{ formulario.tipoEquipo.value }}</h2>
+        <h2>Editar producto:<br> {{ formulario.tipoEquipo.value }}</h2>
     </div>
 </div>
-<div class="card">
+<div class="">
     <div class="card-body">
         {% include "paginas/productos/form.html" %}
     </div>

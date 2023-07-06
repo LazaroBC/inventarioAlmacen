@@ -2,7 +2,6 @@
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +9,12 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link href="{% static 'css/estilos.css' %}" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    
+    <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
     <title>{% block titulo %} {% endblock %}</title>
 </head>
 
-<body class="fondo" style="font-family: 'Lato';">
+<body class="fondo" style="font-family: 'Lato'; margin-bottom: 50px;">
 
     <nav class="navbar navbar-expand navbar-light bg-light fixed-top">
         <div class="container">
@@ -40,7 +41,9 @@
             </div>
         </div>
     </div>
-
+<footer class="text-right">
+    <img src="{% static 'img/faviconFooter.ico' %}" alt="LBC" class="float-end" style="max-width: 50px;">
+</footer>
     <!-- Scripts Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

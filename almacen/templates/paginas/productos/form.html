@@ -1,3 +1,4 @@
+
 <form enctype="multipart/form-data" method="post">
     {% csrf_token %}
     {% for campo in formulario %}
@@ -5,12 +6,35 @@
         <label for="{{ campo.id_for_label }}" class="form-label">{{ campo.label }}</label>
         {% if campo.field.widget.input_type == 'file' and campo.value %}
         <br />
-        <img src="{{ MEDIA_URL }}{{ campo.value.url }}" alt="" width="100px">
+        <img src="{{ MEDIA_URL }}{{ campo.value.url }}" alt="Imagen" width="100px">
         <input type="{{ campo.field.widget.input_type }}" class="form-control" name="{{ campo.name }}"
             id="{{ campo.id_for_label }}" aria-describedby="helpId" placeholder="{{ campo.label }}"
             value="{{ campo.value | default_if_none:'' }}">
+        {% elif campo.name == 'tipoEquipo' %}
+        <select class="form-control form-control-sm" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
+            <option>Seleccione un tipo de equipo</option>
+            <option value="COMPRESOR">COMPRESOR</option>
+            <option value="CINTA CORRER">CINTA CORRER</option>
+            <option value="EQUIPAMIENTO ORTOPODOLÓGICO">EQUIPAMIENTO ORTOPODOLÓGICO</option>
+            <option value="ESTERILIZADOR">ESTERILIZADOR</option>
+            <option value="LAVAVAJILLAS">LAVAVAJILLAS</option>
+            <option value="EQUIPAMIENTO ODONTOLÓGICO">EQUIPAMIENTO ODONTOLÓGICO</option>
+            <option value="LOCALIZADOR ÁPICES">LOCALIZADOR ÁPICES</option>
+            <option value="MANIQUÍ DENTAL">MANIQUÍ DENTAL</option>
+            <option value="RECORTADORA">RECORTADORA</option>
+            <option value="MESAS ODONTOLÓGICAS">MESAS ODONTOLÓGICAS</option>
+            <option value="REGULADOR VELOCIDAD">REGULADOR VELOCIDAD</option>
+            <option value="MOTOR ASPIRACIÓN">MOTOR ASPIRACIÓN</option>
+            <option value="PULIDORA">PULIDORA</option>
+            <option value="OSMOSIS">OSMOSIS</option>
+            <option value="IMAGEN DIAGNÓSTICA">IMAGEN DIAGNÓSTICA</option>
+            <option value="REVELADORA">REVELADORA</option>
+            <option value="TERMOSELLADORA">TERMOSELLADORA</option>
+            <option value="SILLÓN DENTAL">SILLÓN DENTAL</option>
+            <option value="SILLÓN PODOLÓGICO">SILLÓN PODOLÓGICO</option>
+        </select>
         {% elif campo.field.widget.input_type == 'checkbox' %}
-        <select class="form-select" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
+        <select class="form-control form-control-sm" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
             <option value="True" {% if campo.value %} selected{% endif %}>Licitado</option>
             <option value="False" {% if not campo.value %} selected{% endif %}>No Licitado</option>
         </select>
@@ -39,13 +63,13 @@
             <option value="SILLON PODOLOGICO">SILLON PODOLOGICO</option>
         </select>
         {% elif campo.name == 'clinica' %}
-        <select class="form-select" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
+        <select class="form-control form-control-sm" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
             <option value="">Seleccione una clínica</option>
             <option value="Odontologia">Odontología</option>
             <option value="Psicología">Psicología</option>
         </select>
         {% elif campo.name == 'estado' %}
-        <select class="form-select" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
+        <select class="form-control form-control-sm" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
             <option value="">Seleccione un estado</option>
             <option value="En funcionamiento">En funcionamiento</option>
             <option value="Parado">Parado</option>
@@ -53,7 +77,7 @@
             <option value="En reparación">En reparación</option>
         </select>
         {% else %}
-        <input type="{{ campo.field.widget.input_type }}" class="form-control" name="{{ campo.name }}"
+        <input type="{{ campo.field.widget.input_type }}" class="form-control form-control-sm" name="{{ campo.name }}"
             id="{{ campo.id_for_label }}" aria-describedby="helpId" placeholder="{{ campo.label }}"
             value="{{ campo.value | default_if_none:'' }}">
         {% endif %}
@@ -63,5 +87,8 @@
         <div class="alert alert-danger" style="width: 40%;" role="alert">{{ campo.errors }}</div>
         {% endif %}
         {% endfor %}
+    </div>
+</div>
         <button type="submit" class="btn btn-success">Guardar</button>
+        <a name="" id="" class="btn btn-primary" href="{% url 'listaProductos' %}" role="button">Cancelar</a>
 </form>
