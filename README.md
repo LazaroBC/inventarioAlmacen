@@ -43,8 +43,8 @@ python3 manage.py migrate
   - 3 horas
 - Commit 12: Cambios en models validators y alguna pequeña vista de botones
   - 2 horas
-  
-
+- Commit 13: Arreglo de vista fotos
+  - 2 horas
 
 
 
