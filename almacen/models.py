@@ -21,13 +21,13 @@ def validate_pdf(value):
 class Producto(models.Model):
     id = models.AutoField(primary_key=True)
     foto1 = models.ImageField(
-        upload_to='almacen/static/img', null=True, blank=True, verbose_name= "Imagenes")
+        upload_to='img/', null=True, blank=True, verbose_name= "Imagenes")
     foto2 = models.ImageField(
-        upload_to='almacen/static/img', null=True, blank=True, verbose_name= "Imagenes")
+        upload_to='img/', null=True, blank=True, verbose_name= "Imagenes")
     foto3 = models.ImageField(
-        upload_to='almacen/static/img', null=True, blank=True, verbose_name= "Imagenes")
+        upload_to='img/', null=True, blank=True, verbose_name= "Imagenes")
     manualInstrucciones = models.FileField(
-        upload_to='almacen/static/docs', null=True, blank=True, validators=[validate_pdf], verbose_name= "Documentos")
+        upload_to='docs', null=True, blank=True, validators=[validate_pdf], verbose_name= "Documentos")
     tipoEquipo = models.TextField(null=False, blank=False, verbose_name="Tipo de Equipo")
     subtipoEquipo = models.TextField(null=True, blank=True, verbose_name="Subtipo de Equipo")
     numeroInventario = models.TextField(null=False, blank=False, verbose_name="Numero de Inventario")
