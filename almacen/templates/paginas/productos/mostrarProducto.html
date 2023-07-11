@@ -49,12 +49,14 @@
 {% for p in producto.values %}
 {% if p.manualInstrucciones %}
 <div class="col-1">
-  <img src="{{ MEDIA_URL }}/docs/{{ p.manualInstrucciones }}" class="img-fluid ms-1 rounded-3 shadow-sm border-2 border-white"
-    alt="imagen" width="150px">
+  <br>
+  <a href="{{ MEDIA_URL }}/docs/{{ p.manualInstrucciones}}" download="{{ MEDIA_URL }}/docs/{{ p.manualInstrucciones}}"></a>
+  <img src="{{ ruta_miniatura }}" class="img-fluid ms-1 rounded-1 shadow-sm border-2 border-white"
+    alt="imagen" width="150px" style="padding-bottom: 10px;">
 </div>
+
 {% endif %}
 {% endfor %}
-
 <div class="card-body">
 
   {% for p in producto.values %}

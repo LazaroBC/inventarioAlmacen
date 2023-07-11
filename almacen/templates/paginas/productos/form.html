@@ -7,12 +7,17 @@
         {% if campo.field.widget.input_type == 'file' and campo.value %}
         <br />
         <img src="{{ MEDIA_URL }}{{ campo.value.url }}" alt="Imagen" width="100px">
+        <a href="{{ campo.value.url }}" download="{{ nombre_archivo }}">{{ nombre_archivo }}</a>
+        <!-- <a src="{{ MEDIA_URL }}{{ campo.value.url }}" 
+                download="{{ campo.value.name }}"
+                for="{{ campo.id_for_label }}" 
+                class="form-label">{{ MEDIA_URL }}{{ campo.value.url}}</a> -->
         <input type="{{ campo.field.widget.input_type }}" class="form-control" name="{{ campo.name }}"
-            id="{{ campo.id_for_label }}" aria-describedby="helpId" placeholder="{{ campo.label }}"
+            id="{{ campo.id_for_label }}" aria-describedby="" placeholder="{{campo.name}}"
             value="{{ campo.value | default_if_none:'' }}">
         {% elif campo.name == 'tipoEquipo' %}
         <select class="form-control form-control-sm" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
-            <option>Seleccione un tipo de equipo</option>
+            <option>{{ formulario.tipoEquipo.value }}</option>
             <option value="COMPRESOR">COMPRESOR</option>
             <option value="CINTA CORRER">CINTA CORRER</option>
             <option value="EQUIPAMIENTO ORTOPODOLÓGICO">EQUIPAMIENTO ORTOPODOLÓGICO</option>
@@ -35,18 +40,19 @@
         </select>
         {% elif campo.field.widget.input_type == 'checkbox' %}
         <select class="form-control form-control-sm" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
+            <option>{{ formulario.licitado.value }}</option>
             <option value="True" {% if campo.value %} selected{% endif %}>Licitado</option>
             <option value="False" {% if not campo.value %} selected{% endif %}>No Licitado</option>
         </select>
         {% elif campo.name == 'clinica' %}
         <select class="form-control form-control-sm" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
-            <option value="">Seleccione una clínica</option>
+            <option>{{ formulario.clinica.value }}</option>
             <option value="Odontologia">Odontología</option>
             <option value="Psicología">Psicología</option>
         </select>
         {% elif campo.name == 'estado' %}
         <select class="form-control form-control-sm" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
-            <option value="">Seleccione un estado</option>
+            <option value="">{{ formulario.estado.value }}</option>
             <option value="En funcionamiento">En funcionamiento</option>
             <option value="Parado">Parado</option>
             <option value="Estropeado">Estropeado</option>

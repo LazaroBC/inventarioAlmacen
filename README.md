@@ -45,7 +45,9 @@ python3 manage.py migrate
   - 2 horas
 - Commit 13: Arreglo de vista fotos
   - 2 horas
-
+- Commit 14: Descarga imagnes y docs, completada, deplegables ya ven los datos de la BBDD
+  - 2 horas
+  
 
 
 ## Siguiente:
