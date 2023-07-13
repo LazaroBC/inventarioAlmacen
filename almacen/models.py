@@ -59,6 +59,7 @@ class Producto(models.Model):
     tiquetsRefTiquetingFLA = models.TextField(null=True, blank=True, verbose_name="Tiquets de Referencia del Tiqueting FLA")
     otros = models.TextField(null=True, blank=True, verbose_name="Otros")
     clinica = models.TextField(null=True, blank=True, verbose_name="Clinica")
+    departamento = models.TextField(null=True, blank=True, verbose_name="Departamento")
     ubicacion = models.TextField(null=True, blank=True, verbose_name="Ubicacion")
 
     def __str__(self):

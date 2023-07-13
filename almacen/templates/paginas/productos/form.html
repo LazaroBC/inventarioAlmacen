@@ -47,8 +47,32 @@
         {% elif campo.name == 'clinica' %}
         <select class="form-control form-control-sm" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
             <option>{{ formulario.clinica.value }}</option>
-            <option value="Odontologia">Odontología</option>
+            <option value="Odontología">Odontología</option>
+            <option value="Podologia">Podología</option>
+            <option value="Cunnaf">Cunnaf</option>
+            <option value="Optometria">Optometría</option>
+            <option value="Logopedia">Logopedia</option>
             <option value="Psicología">Psicología</option>
+        </select>
+        {% elif campo.name == 'departamento' %}
+        <select class="form-control form-control-sm" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
+            <option>{{ formulario.depatamento.value }}</option>
+            <option value="Externa">Externa</option>
+            <option value="Comunitaria">Comunitaria</option>
+            <option value="Periodoncia">Periodoncia</option>
+            <option value="Pacientes especiales">Pacientes especiales</option>
+            <option value="Medicina bucal">Medicina bucal</option>
+            <option value="Cirugia">Cirugía</option>
+            <option value="Clinica A">Clinica A</option>
+            <option value="Clinica B">Clinica B</option>
+            <option value="Protesis">Protesis</option>
+            <option value="Laboratorio excelencia">Laboratorio excelencia</option>
+            <option value="Laboratorio general">Laboratorio general</option>
+            <option value="PTD">PTD</option>
+            <option value="Odontopediatría">Odontopediatría</option>
+            <option value="Preclinicio Faus">Preclinicio Faus</option>
+            <option value="Endola Forner">Endola Forner</option>
+            <option value="Ortodoncía">Ortodoncía</option>
         </select>
         {% elif campo.name == 'estado' %}
         <select class="form-control form-control-sm" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
