@@ -61,115 +61,113 @@
 
   {% for p in producto.values %}
   <ul class="list-group list-group list-group-horizontal">
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Tipo de equipo:</p>
-      <span>{{ p.tipoEquipo }}</span>
+      <span style="font-size: 1.5rem;">{{ p.tipoEquipo }}</span>
     </li>
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Subtipo de equipo:</p>
-      <span>{{ p.subtipoEquipo }}</span>
+      <span style="font-size: 1.5rem;">{{ p.subtipoEquipo }}</span>
 
     </li>
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Número de inventario:</p>
-      <span class="font-weight-bold">{{ p.numeroInventario }}</span>
+      <span class="font-weight-bold" style="background-color: aqua; font-size: 1.5rem;">{{ p.numeroInventario }}</span>
 
     </li>
   </ul>
   <ul class="list-group list-group list-group-horizontal">
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
+      <p></p>
       {% if p.mantenimientoLicitado %}
-      <p class="font-weight-bold" style="font-size: 1.2rem;">Licitado</p>
+      <p class="font-weight-bold" style="font-size: 1.5rem;">Licitado</p>
       {% else %}
-      <p class="font-weight-bold" style="font-size: 1.2rem;">No licitado</p>
+      <p class="font-weight-bold" style="font-size: 1.5rem;">No licitado</p>
       {% endif %}
     </li>
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Número de Mantenedor:</p>
-      <span>{{p.numeroMantenedor}}</span>
+      <span style="font-size: 1.5rem;">{{p.numeroMantenedor}}</span>
     </li>
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Marca:</p>
-      <span>{{p.marca}}</span>
+      <span style="font-size: 1.5rem;">{{p.marca}}</span>
     </li>
   </ul>
   <ul class="list-group list-group list-group-horizontal">
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Modelo:</p>
-      <span>{{p.modelo}}</span>
+      <span style="font-size: 1.5rem;">{{p.modelo}}</span>
     </li>
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Año de fabricación:</p>
-      <span>{{p.anyoFabricacion}}</span>
+      <span style="font-size: 1.5rem;">{{p.anyoFabricacion}}</span>
     </li>
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">SN:</p>
-      <span>{{p.sn}}</span>
+      <span style="font-size: 1.5rem;">{{p.sn}}</span>
     </li>
   </ul>
   <ul class="list-group list-group list-group-horizontal">
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">NREF:</p>
-      <span>{{p.nref}}</span>
+      <span style="font-size: 1.5rem;">{{p.nref}}</span>
     </li>
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Descripción:</p>
-      <span>{{p.descripcion}}</span>
+      <span style="font-size: 1.5rem;">{{p.descripcion}}</span>
     </li>
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Comentarios:</p>
-      <span>{{p.comentarios}}</span>
+      <span style="font-size: 1.1rem;">{{p.comentarios}}</span>
     </li>
   </ul>
   <ul class="list-group list-group list-group-horizontal">
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Estado:</p>
-      <span>{{p.estado}}</span>
+      <span style="font-size: 1.5rem;">{{p.estado}}</span>
     </li>
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Año de compra:</p>
-      <span>{{p.anyoCompra}}</span>
+      <span style="font-size: 1.5rem;">{{p.anyoCompra}}</span>
     </li>
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Número de contratación:</p>
-      </span>{{p.numExpContratacion}}</span>
+      <span style="font-size: 1.5rem;">{{p.numExpContratacion}}</span>
     </li>
 
   </ul>
   <ul class="list-group list-group list-group-horizontal">
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Tiquet de referencia del mantenedor:</p>
-      <span>{{p.tiquetsReferenciaMantenedor}}</span>
+      <span style="font-size: 1.5rem;">{{p.tiquetsReferenciaMantenedor}}</span>
 
     </li>
     <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Tiquet de referencia del mantenimiento UV:</p>
-      <span>{{p.tiquetsReferenciaMantUV}}</span>
+      <span style="font-size: 1.5rem;">{{p.tiquetsReferenciaMantUV}}</span>
 
     </li>
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Tiquet de refrencia de TiquetingFLA:</p>
-      <br>
-      <span>-----------------------</span>
-      <br>
-      <span>{{p.tiquetsRefTiquetingFLA}}</span>
+      <span style="font-size: 1.5rem;">{{p.tiquetsRefTiquetingFLA}}</span>
 
     </li>
   </ul>
   <ul class="list-group list-group list-group-horizontal">
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Otros:</p>
-      <span>{{p.otros}}</span>
+      <span style="font-size: 1.1rem;">{{p.otros}}</span>
     </li>
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Clínica:</p>
-      <span>{{p.clinica}} / </span>
-      <span>{{p.departamento}}</span>
+      <span style="font-size: 1.5rem;">{{p.clinica}} / </span>
+      <span style="font-size: 1.5rem;">{{p.departamento}}</span>
 
     </li>
-    <li class="list-group-item flex-fill ms-1 rounded-3 " style="width: 33.33%;">
+    <li class="list-group-item flex-fill ms-1 rounded-3 " style="margin: 0.15em; width: 33.33%;">
       <p class="font-weight-bold" style="font-size: 1.2rem;">Ubicación:</p>
-      <span>{{p.ubicacion}}</span>
+      <span style="font-size: 1.5rem;">{{p.ubicacion}}</span>
 
     </li>
   </ul>
