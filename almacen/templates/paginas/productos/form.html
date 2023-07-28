@@ -41,7 +41,7 @@
         {% elif campo.field.widget.input_type == 'checkbox' %}
         <select class="form-control form-control-sm" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
             <option>{{ formulario.licitado.value }}</option>
-            <option value="True" {% if campo.value %} selected {% endif %}>Licitado</option>
+            <option value="True" {% if campo.value %} selected {% endif %}>Sí Licitado</option>
             <option value="False" {% if not campo.value %} selected {% endif %}>No Licitado</option>
         </select>
         {% elif campo.name == 'clinica' %}
